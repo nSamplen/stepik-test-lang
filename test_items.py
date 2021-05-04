@@ -14,9 +14,9 @@ def test_there_is_add_to_card_button(browser):
     
     time.sleep(10)
 
-    button = browser.find_element_by_css_selector(".btn-add-to-basket")
-
-    assert button, "There is no button" 
+    assert browser.find_element_by_class_name('btn-add-to-basket').is_displayed(), \
+        "There is no button"
+    
 
 
 
